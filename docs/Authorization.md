@@ -7,7 +7,7 @@ To access the api, you have to be registered on https://api.immobilienscout24.de
 
 There are two ways bringing your auth keys into the code!
 
-1. Write it into your env-File:
+1. Write it into your env-file:
 
 ```dotenv
 IMSC_CONSUMER_KEY=YOUR_CONSUMER_KEY
@@ -16,15 +16,15 @@ IMSC_TOKEN=YOUR_TOKEN
 IMSC_TOKEN_SECRET=YOUR_TOKEN_SECRET
 ```
 
-2. Add it in your code
+2. Add it to your code
 
 ````php
 // set auth data
 $authData = [
-    'consumer_key' => 'YOUR_CONSUMER_KEY',
-    'consumer_secret' => 'YOUR_CONSUMER_SECRET',
-    'token' => 'YOUR_TOKEN',
-    'token_secret' => 'YOUR_TOKEN_SECRET'
+    'consumer_key'      => 'YOUR_CONSUMER_KEY',
+    'consumer_secret'   => 'YOUR_CONSUMER_SECRET',
+    'token'             => 'YOUR_TOKEN',
+    'token_secret'      => 'YOUR_TOKEN_SECRET'
 ];
 
 // now you can pass it to every class
