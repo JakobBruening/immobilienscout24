@@ -1,0 +1,31 @@
+{
+    "name": "jakobbruening/immobilienscout24",
+    "description": "Simple package for the ImmobilienScout24 API",
+    "type": "library",
+    "license": "GPL-3.0",
+    "keywords": [
+        "immobilienscout",
+        "api"
+    ],
+    "authors": [
+        {
+            "name": "Jakob",
+            "email": "kontakt@jakobbruening.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.3",
+        "ext-oauth": "*",
+        "guzzlehttp/oauth-subscriber": "^0.5.0",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Immoscout\\": "src/Immoscout"
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.2"
+    },
+    "minimum-stability": "dev"
+}

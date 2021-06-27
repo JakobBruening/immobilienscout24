@@ -1,0 +1,9 @@
+# Development
+/.idea/
+/src/vendor/
+/composer.lock
+
+# PHPUnit
+/.phpunit/*
+!/.phpunit/.gitkeep
+/.phpunit*.cache
