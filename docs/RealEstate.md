@@ -1,0 +1,27 @@
+# Real estates
+
+## Configure
+
+```php
+$realEstate = (new RealEstate())
+                ->setPublishChannel(?string $publishChannel = null)
+                ->setIncludeAttachments(bool $includeAttachments = false)
+                ->setIncludeArchive(bool $includeArchive = false)
+                ->setPageSize(int $pageSize = 100);
+```
+
+## Get all (or get by specific page)
+
+```php
+$realEstate->getAll(?int $page = null);
+```
+
+## Get all with details
+```php
+$realEstate->getAllWithDetails();
+```
+
+## Get a real estate by id
+````php
+$realEstate->getOneById();
+````

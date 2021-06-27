@@ -9,12 +9,12 @@
     ],
     "authors": [
         {
-            "name": "Jakob",
+            "name": "Jakob Bruening",
             "email": "kontakt@jakobbruening.com"
         }
     ],
     "require": {
-        "guzzlehttp/guzzle": "^7.3",
+        "guzzlehttp/guzzle": "^7.2.0",
         "ext-oauth": "*",
         "guzzlehttp/oauth-subscriber": "^0.5.0",
         "ext-json": "*"

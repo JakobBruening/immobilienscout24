@@ -22,7 +22,7 @@ class Contact extends ApiRequest
     /**
      * Gets a contact by contact id
      */
-    public function getOneById(int $id, $external = false): array
+    public function getOneById(int $id, bool $external = false): array
     {
         return $this->request(sprintf('user/me/contact/%s%s', $external ? 'ext-' : '', $id));
     }
