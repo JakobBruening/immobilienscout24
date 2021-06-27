@@ -4,10 +4,10 @@
 
 ```php
 $realEstate = (new RealEstate())
-                ->setPublishChannel(?string $publishChannel = null)
-                ->setIncludeAttachments(bool $includeAttachments = false)
-                ->setIncludeArchive(bool $includeArchive = false)
-                ->setPageSize(int $pageSize = 100);
+  ->setPublishChannel(?string $publishChannel = null)
+  ->setIncludeAttachments(bool $includeAttachments = false)
+  ->setIncludeArchive(bool $includeArchive = false)
+  ->setPageSize(int $pageSize = 100);
 ```
 
 ## Get all (or get by specific page)

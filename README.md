@@ -10,6 +10,7 @@ A package to work with the [Immoscout24 API](https://api.immobilienscout24.de/).
 composer require jakobbruening/immobilienscout24
 ```
 ## Feature documentation
+- [Authorization](docs/Authorization.md)
 - [Real estates](docs/RealEstate.md)
 - [Attachments](docs/Attachments.md)
 - [Contacts](docs/Contact.md)
