@@ -1,4 +1,6 @@
 # Contact
+**API reference**: https://api.immobilienscout24.de/api-docs/import-export/contact/overview/
+<br><br>
 
 ## Get all contacts
 ```php

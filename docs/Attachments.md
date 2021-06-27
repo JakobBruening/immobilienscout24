@@ -1,4 +1,6 @@
 # Attachments
+**API reference**: https://api.immobilienscout24.de/api-docs/import-export/attachment/overview/
+<br><br>
 
 ## Get all attachments
 

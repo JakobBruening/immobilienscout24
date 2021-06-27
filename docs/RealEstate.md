@@ -11,7 +11,8 @@ $realEstate = (new RealEstate())
 ```
 
 ## Get all (or get by specific page)
-
+**API reference**: https://api.immobilienscout24.de/api-docs/import-export/introduction/
+<br><br>
 ```php
 $realEstate->getAll(?int $page = null);
 ```
