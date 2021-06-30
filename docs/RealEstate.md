@@ -21,6 +21,7 @@ $realEstate->getAll(?int $page = null);
 ```php
 $realEstate->getAllWithDetails();
 ```
+*We highly recommend caching this result.*
 
 ## Get a real estate by id
 ````php

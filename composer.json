@@ -1,10 +1,11 @@
 {
     "name": "jakobbruening/immobilienscout24",
-    "description": "Simple package for the ImmobilienScout24 API",
+    "description": "Simple package to work with the ImmobilienScout24 API",
     "type": "library",
     "license": "GPL-3.0",
     "keywords": [
-        "immobilienscout",
+        "immobilienscout24",
+        "immoscout24",
         "api"
     ],
     "authors": [
@@ -26,6 +27,5 @@
     },
     "require-dev": {
         "symfony/var-dumper": "^5.2"
-    },
-    "minimum-stability": "dev"
+    }
 }

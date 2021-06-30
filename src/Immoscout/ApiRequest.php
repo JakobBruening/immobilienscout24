@@ -27,6 +27,9 @@ class ApiRequest
         $this->prepareClient($auth);
     }
 
+    /**
+     * Authenticate and prepare GuzzleHttp client
+     */
     private function prepareClient(?array $authData = null): void
     {
         $key = $authData['consumer_key'] ?? $_ENV['IMSC_CONSUMER_KEY'] ?? null;
@@ -55,11 +58,7 @@ class ApiRequest
     }
 
     /**
-     * @param string $url
-     * @param string $method
-     *
-     * @return array
-     * @throws \Immoscout\Exceptions\ApiException
+     * Sends the api request to ImmoScout24
      */
     protected function request(string $url, string $method = 'GET'): array
     {

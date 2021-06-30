@@ -1,4 +1,4 @@
-# Immobilienscout 24 API
+# ImmobilienScout24 API
 
 [![Software License](https://img.shields.io/badge/license-GPLv3-brightgreen.svg?style=flat-square)](LICENSE.md)
 
@@ -15,7 +15,7 @@ composer require jakobbruening/immobilienscout24
 - [Attachments](docs/Attachments.md)
 - [Contacts](docs/Contact.md)
 
-API documentation: [Immoscout 24](https://api.immobilienscout24.de/)
+API documentation: [ImmoScout24](https://api.immobilienscout24.de/)
 
 
 ## Copyright and license

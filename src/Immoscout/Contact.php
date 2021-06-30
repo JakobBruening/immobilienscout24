@@ -16,7 +16,7 @@ class Contact extends ApiRequest
      */
     public function getAll(): array
     {
-        return $this->request('user/me/contact/');
+        return $this->request('user/me/contact');
     }
 
     /**
