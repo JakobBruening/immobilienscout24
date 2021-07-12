@@ -14,6 +14,7 @@ composer require jakobbruening/immobilienscout24
 - [Real estates](docs/RealEstate.md)
 - [Attachments](docs/Attachments.md)
 - [Contacts](docs/Contact.md)
+- [OnTop placement](docs/OnTop.md)
 
 API documentation: [ImmoScout24](https://api.immobilienscout24.de/)
 
