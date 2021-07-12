@@ -20,17 +20,17 @@ class ApiRequest
 {
     private Client $client;
 
-    protected const API_URL = 'https://rest.immobilienscout24.de/restapi/api/offer/v1.0/%s';
+    protected const API_URL = 'https://rest.immobilienscout24.de/restapi/api/offer/v1.0/user/me/%s';
 
     public function __construct(?array $auth = null)
     {
-        $this->prepareClient($auth);
+        $this->client = $this->getPreparedClient($auth);
     }
 
     /**
      * Authenticate and prepare GuzzleHttp client
      */
-    private function prepareClient(?array $authData = null): void
+    private function getPreparedClient(?array $authData = null): Client
     {
         $key = $authData['consumer_key'] ?? $_ENV['IMSC_CONSUMER_KEY'] ?? null;
         $secret = $authData['consumer_secret'] ?? $_ENV['IMSC_CONSUMER_SECRET'] ?? null;
@@ -50,7 +50,7 @@ class ApiRequest
             'token_secret'    => $tokenSecret
         ]));
 
-        $this->client = new Client([
+        return new Client([
             'handler'               => $stack,
             RequestOptions::AUTH    => 'oauth',
             RequestOptions::HEADERS => ['Accept' => 'application/json'],

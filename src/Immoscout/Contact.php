@@ -16,7 +16,7 @@ class Contact extends ApiRequest
      */
     public function getAll(): array
     {
-        return $this->request('user/me/contact');
+        return $this->request('contact');
     }
 
     /**
@@ -24,7 +24,7 @@ class Contact extends ApiRequest
      */
     public function getOneById(int $id, bool $external = false): array
     {
-        return $this->request(sprintf('user/me/contact/%s%s', $external ? 'ext-' : '', $id));
+        return $this->request(sprintf('contact/%s%s', $external ? 'ext-' : '', $id));
     }
 
     /**

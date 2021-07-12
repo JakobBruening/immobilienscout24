@@ -66,7 +66,7 @@ class RealEstate extends ApiRequest
      */
     public function getOneById(int $id): array
     {
-        $realEstate = $this->request(sprintf('user/me/realestate/%s', $id));
+        $realEstate = $this->request(sprintf('realestate/%s', $id));
 
         return $realEstate[array_key_first($realEstate)];
     }
@@ -74,7 +74,7 @@ class RealEstate extends ApiRequest
     private function handleRequest(?int $page = null): array
     {
         $url = sprintf(
-            'user/me/realestate?archivedobjectsincluded=%s&pagesize=%s&pagenumber=%s',
+            'realestate?archivedobjectsincluded=%s&pagesize=%s&pagenumber=%s',
             $this->includeArchive ? 'true' : 'false',
             $this->pageSize,
             $page ?? 1

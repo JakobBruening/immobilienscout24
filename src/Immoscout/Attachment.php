@@ -16,7 +16,7 @@ class Attachment extends ApiRequest
      */
     public function getAllByRealEstate(int $id)
     {
-        $url = sprintf('user/me/realestate/%s/attachment', $id,);
+        $url = sprintf('realestate/%s/attachment', $id,);
 
         return $this->request($url)['common.attachments'] ?? [];
     }
@@ -26,6 +26,6 @@ class Attachment extends ApiRequest
      */
     public function getOneById(int $realEstateId, int $id)
     {
-        return $this->request(sprintf('user/me/realestate/%s/attachment/%s', $realEstateId, $id));
+        return $this->request(sprintf('realestate/%s/attachment/%s', $realEstateId, $id));
     }
 }

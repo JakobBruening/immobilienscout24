@@ -1,6 +1,6 @@
 # Development
 /.idea/
-/src/vendor/
+/vendor/
 /composer.lock
 
 # PHPUnit
