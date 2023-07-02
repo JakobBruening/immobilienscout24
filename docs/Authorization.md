@@ -45,7 +45,9 @@ the [ImmoScout24 API documentation](https://api.immobilienscout24.de/api-docs/au
 
 ### Change the user
 
-You can also pass a custom user. Either via .env-file
+You can also pass a custom user. 
+The username must be he username which the user uses for logging in to www.immobilienscout24.
+You can configure the user either via .env-file
 
 ```dotenv
 IMSC_USERNAME=yourusername
