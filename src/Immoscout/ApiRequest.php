@@ -20,11 +20,14 @@ class ApiRequest
 {
     private Client $client;
 
-    protected const API_URL = 'https://rest.immobilienscout24.de/restapi/api/offer/v1.0/user/me/%s';
+    private string $user;
 
-    public function __construct(?array $auth = null)
+    protected const API_URL = 'https://rest.immobilienscout24.de/restapi/api/offer/v1.0/user/%s/%s';
+
+    public function __construct(?array $auth = null, ?string $user = null)
     {
         $this->client = $this->getPreparedClient($auth);
+        $this->user = $user ?? $_ENV['IMSC_USERNAME'] ?? 'me';
     }
 
     /**
@@ -63,7 +66,7 @@ class ApiRequest
     protected function request(string $url, string $method = 'GET'): array
     {
         try {
-            $request = $this->client->request($method, sprintf(self::API_URL, $url));
+            $request = $this->client->request($method, sprintf(self::API_URL, $this->user, $url));
         } catch (GuzzleException $e) {
             throw new ApiException($e->getMessage(), $e->getCode());
         }
