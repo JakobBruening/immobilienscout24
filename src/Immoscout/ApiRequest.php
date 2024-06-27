@@ -28,7 +28,7 @@ class ApiRequest
     {
         $this->client = $this->getPreparedClient($auth);
         $this->user = $user ?? $_ENV['IMSC_USERNAME'] ?? 'me';
-        if (trim($this->user) == '') {
+        if (trim($this->user) === '') {
             $this->user = 'me';
         }
     }
