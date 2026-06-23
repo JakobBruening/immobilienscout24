@@ -18,7 +18,7 @@ class Attachment extends ApiRequest
     {
         $url = sprintf('realestate/%s/attachment', $id,);
 
-        return $this->request($url)['common.attachments'] ?? [];
+        return self::normalizeList($this->request($url)['common.attachments'] ?? []);
     }
 
     /**

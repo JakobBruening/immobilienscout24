@@ -64,6 +64,18 @@ class ApiRequest
     }
 
     /**
+     * Normalizes an API list field that returns a single object instead of an array when there is only one result.
+     */
+    protected static function normalizeList(array $items): array
+    {
+        if (empty($items)) {
+            return [];
+        }
+
+        return array_is_list($items) ? $items : [$items];
+    }
+
+    /**
      * Sends the api request to ImmoScout24
      */
     protected function request(string $url, string $method = 'GET'): array

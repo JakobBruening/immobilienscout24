@@ -28,7 +28,9 @@ class RealEstate extends ApiRequest
     public function getAll(?int $page = null): array
     {
         $response = $this->handleRequest($page);
-        $realEstates = $response['realestates.realEstates']['realEstateList']['realEstateElement'] ?? [];
+        $realEstates = self::normalizeList(
+            $response['realestates.realEstates']['realEstateList']['realEstateElement'] ?? []
+        );
 
         if ($page !== null) {
             // Get all real estates by specific page
@@ -38,7 +40,9 @@ class RealEstate extends ApiRequest
         $pageCount = (int)$response['realestates.realEstates']['Paging']['numberOfPages'];
         if ($pageCount !== 1) {
             for ($pageIndex = 1; $pageIndex <= $pageCount; $pageIndex++) {
-                $pageProperties = $this->handleRequest($pageIndex)['realestates.realEstates']['realEstateList']['realEstateElement'];
+                $pageProperties = self::normalizeList(
+                    $this->handleRequest($pageIndex)['realestates.realEstates']['realEstateList']['realEstateElement'] ?? []
+                );
                 foreach ($pageProperties as $realEstate) {
                     $realEstates[] = $realEstate;
                 }
